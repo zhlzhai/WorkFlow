@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+   <!-- 建立servlet名和servlet的类名之间的映射 -->
+   <servlet>
+      <servlet-name>Test</servlet-name>
+      <servlet-class>test.HelloWorld</servlet-class>
+   </servlet>
+   
+   <!-- 指定特定URL的Servlet类的名字.凡以/test开始的URL都以名Test的servlet来处理,即HelloWorld类 -->
+   <servlet-mapping>
+      <servlet-name>Test</servlet-name>
+      <url-pattern>/test/*</url-pattern>
+   </servlet-mapping>
+   
+   <!-- 设置Tomcat会话超时限制 -->
+   <session-config>
+      <session-timeout>30</session-timeout>
+   </session-config>
+   
+   <!-- 设置默认主页 -->
+   <welcome-file-list>
+      <welcome-file>index.html</welcome-file>
+   </welcome-file-list>   
+</web-app>
